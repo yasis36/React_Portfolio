@@ -52,7 +52,8 @@ const Typewriter = () => {
           </td>
           <td>
             <h2 className="welcome-to">Welcome to my Portfolio</h2>
-            <div className="container"> <h3>Here is my skills contact me</h3>
+            <h4 className="container">Here is my skills contact me</h4>
+              <div className="container"> <h5>+251-919-484584</h5>
               <div className="text">{text}</div>
             </div>
           </td>
