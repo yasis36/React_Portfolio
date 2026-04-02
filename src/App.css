@@ -1,45 +1,7 @@
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-shell {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-section {
+  padding-top: 9rem;
 }
-
-.App-header {
-  
-     font-size: calc(10px + 2vmin);
-     color: rgb(158, 225, 206);
-}
-
-.App-link {
-  color: #fb7d61;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.App-header h2{
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-  
-}
-.App-header h1{
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-  }
-  .App-header h3{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  
-    }
