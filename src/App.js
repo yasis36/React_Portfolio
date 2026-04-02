@@ -7,49 +7,42 @@ import Skill from './component/Skill';
 import Gallery from './component/Gallery';
 import Contact from './component/Contact';
 import Footer from './component/Footer';
-import Typewriter from './component/Welcome';
-
+import Welcome from './component/Welcome';
 
 function App() {
   return (
- 
-    <header className="App-header">
+    <div className="app-shell">
+      <Navbar />
 
-<Navbar/>
-<section id="home" className="section">
-        <Typewriter/>
-              </section>
+      <main>
+        <section id="home" className="section hero-section">
+          <Welcome />
+        </section>
 
-      <section id="About" className="section">
+        <section id="About" className="section">
+          <About />
+        </section>
 
-      <About />
-      </section>
-      
-      <section id="Service" className="section">
+        <section id="Service" className="section">
+          <Service />
+        </section>
 
-      <Service />
-      </section>
+        <section id="Skill" className="section">
+          <Skill />
+        </section>
 
-      <section id="Skill" className="section">
-      <Skill />
-      </section>
+        <section id="Gallery" className="section">
+          <Gallery />
+        </section>
 
-      <section id="Gallery" className="section">
+        <section id="Contact" className="section">
+          <Contact />
+        </section>
+      </main>
 
-      <Gallery />
-      </section>
-
-      <section id="Contact" className="section">
-
-      <Contact />
-      </section>
-
-     
       <Footer />
-      
-   </header>
+    </div>
   );
 }
-  
 
 export default App;
