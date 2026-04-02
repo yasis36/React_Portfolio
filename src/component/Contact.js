@@ -1,52 +1,55 @@
-import React from "react";
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function Contact() {
-    return (
-       <table>
-        <div className="contact-container">
-            <h2>Contact Me</h2>
-            <td>
-            <div className="contact-description">
-                <p>
-                    Thank you for visiting my portfolio! I am always looking for new opportunities to learn and grow as a developer.
-                </p>
+const contactItems = [
+  { icon: faEnvelope, label: 'Email', value: 'sis.tad246@gmail.com' },
+  { icon: faPhone, label: 'Phone', value: '+251 919 48 45 84' },
+  { icon: faLocationDot, label: 'Location', value: 'Ethiopia' },
+];
 
-                <p>
-                    If you have any questions or would like to get in touch, please feel free to drop me a message. I will try my best to get back to you as soon as possible.
-                </p>
-                <p>
-                <FontAwesomeIcon icon={faEnvelope}/>  :sis.tad246@gmail.com
-                </p>
-                <p>
-                   <FontAwesomeIcon icon={faPhone}/> +251 919 48 45 84
-                    </p>
-            </div>
-            </td>
-            <td>
-            <div className="contact-form">
-            <h3>Send me a message</h3>
-            <p>Fill out the form below to send me a message:</p>
-    
-            <form action="mailto:sis.tad246@gmail.com" method="post" enctype="text/plain">
-                <div className="name">
-                    <input type="text" id="name" name="name" required placeholder="Name"/>
-               
-                    <input type="email" id="email" name="email" placeholder="E-mail" required />
-                </div>
+function Contact() {
+  return (
+    <div className="content-block contact-block">
+      <div className="section-heading reveal-up">
+        <p className="eyebrow">Contact</p>
+        <h2>Let&apos;s build something that feels professional and memorable</h2>
+      </div>
+
+      <div className="contact-grid">
+        <div className="contact-description reveal-up">
+          <p>
+            I&apos;m open to freelance projects, collaborations, and creative partnerships where strong
+            design and thoughtful development matter.
+          </p>
+
+          <div className="contact-details">
+            {contactItems.map((item) => (
+              <div key={item.label} className="contact-detail-card">
+                <FontAwesomeIcon icon={item.icon} />
                 <div>
-                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                  <strong>{item.label}</strong>
+                  <span>{item.value}</span>
                 </div>
-                <button type="submit">Send</button>
-            </form>   
-            </div>   
-            </td>    
+              </div>
+            ))}
+          </div>
         </div>
-        
-        </table>
-    );
+
+        <div className="contact-form reveal-up-delayed">
+          <h3>Send a message</h3>
+          <form action="mailto:sis.tad246@gmail.com" method="post" encType="text/plain">
+            <div className="field-row">
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+              <input type="email" id="email" name="email" required placeholder="Your email" />
+            </div>
+            <textarea id="message" name="message" placeholder="Tell me about your project" required />
+            <button type="submit">Start the Conversation</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Contact;
-
