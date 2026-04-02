@@ -1,45 +1,43 @@
 import React from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import logo from "../img/Emojione_1F60E.png"; // Update the path to your photo
+import {
+  faLinkedin,
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 
+const socials = [
+  { icon: faLinkedin, href: 'https://www.linkedin.com' },
+  { icon: faFacebook, href: 'https://www.facebook.com' },
+  { icon: faInstagram, href: 'https://www.instagram.com' },
+  { icon: faTwitter, href: 'https://www.twitter.com' },
+  { icon: faYoutube, href: 'https://www.youtube.com' },
+];
 
 const Footer = () => {
-    return (
-        
-        <footer className="footer">
-
-        <table className="footers" border={0} cellPadding={0} cellSpacing={0} width="100%"style={{textAlign: 'bottom'}}>
-            <tr>
-            <td>
-                        {/* <h5 className="footer-text"><span>
-                            <img src={logo} className="footer-logo" alt="" />
-                            </span></h5> */}
-                        <p>
-                           I am dedicated to providing the best services to customers.
-                        </p>
-            </td>
-            <td>
-                    
-                <div className="footer-bottom" >
-                    <p>&copy; Sisay 2025 . All rights reserved.</p>
-                </div>
-            </td>
-            </tr>
-            
-        </table>
-            <div className="contact-socials">
-            {/* <h3>Follow me</h3> */}
-            <a href="https://www.linkedin.com" className="soc-icon"><FontAwesomeIcon icon={faLinkedin} /></a>
-            <a href="https://www.facebook.com"className="soc-icon"><FontAwesomeIcon icon={faFacebook} /></a>
-            <a href="https://www.instagram.com"className="soc-icon"><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href="https://www.twitter.com"className="soc-icon"><FontAwesomeIcon icon={faTwitter} /></a>
-            <a href="https://www.youtube.com"className="soc-icon"><FontAwesomeIcon icon={faYoutube} /></a>
+  return (
+    <footer className="footer">
+      <div className="footer-inner">
+        <div>
+          <p className="eyebrow">Sisay Tadesse</p>
+          <h3>Built to present skills with more style, clarity, and confidence.</h3>
         </div>
-        </footer>
 
-    );
+        <div className="footer-meta">
+          <div className="footer-socials">
+            {socials.map((social, index) => (
+              <a key={index} href={social.href} className="soc-icon" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={social.icon} />
+              </a>
+            ))}
+          </div>
+          <p>&copy; 2026 Sisay Tadesse. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
